@@ -11,5 +11,5 @@ module "ec2" {
 }
 
 output "ip_address_ec2" {
-  value = module.ec2.ip_address
+  value = module.ec2[*].ip_address
 }
