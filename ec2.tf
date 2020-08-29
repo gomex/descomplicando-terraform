@@ -6,15 +6,15 @@ data "aws_ami" "ubuntu" {
     values = ["IaaSWeek-${var.hash_commit}"]
   }
 
-  owners = ["777015859311"] # My User
+  owners = ["178520105998"] # My User
 }
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.medium"
+  instance_type = var.instance_type
 
   tags = {
-    Name = "HelloWorld"
+    Name = var.app_name
   }
 }
 
