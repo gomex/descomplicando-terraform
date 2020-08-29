@@ -10,5 +10,6 @@ variable "app_name" {
 
 variable "instance_type" {
   type = string
+  default = "t3.micro"
   description = "Tipo de instância ec2 usada na AWS"
 }
