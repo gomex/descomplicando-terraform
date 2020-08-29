@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 module "ec2" {
-  source                  = "git@github.com:gomex/descomplicando-terraform-modulo.git?ref=v0.1"
+  source                  = "git@github.com:gomex/descomplicando-terraform-modulo.git?ref=v0.2"
   app_name                = "turma3"
   instance_type           = "t3.micro"
 }
